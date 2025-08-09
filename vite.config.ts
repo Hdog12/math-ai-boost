@@ -1,7 +1,7 @@
 import { defineConfig } from 'vite'
-import react from '@vitejs/plugin-react'
+import react from '@vitejs/plugin-react-swc'
 
 export default defineConfig({
   plugins: [react()],
-  base: '/math-ai-boost/', // IMPORTANT for GitHub Pages
+  base: '/math-ai-boost/', // must match repo name for GitHub Pages
 })
