@@ -4,7 +4,7 @@ import heroImage from '@/assets/hero-math-illustration.jpg';
 const Hero = () => {
   const handleGetRevisionSheet = () => {
     window.open(
-      'https://docs.google.com/spreadsheets/d/1C2nGNYV4nyfJ1TysAODarNmNPZMzKMMNj6lwM7VFJ4Q/template/preview',
+      'https://docs.google.com/spreadsheets/d/1FadAtXk0JX2NJECDc-aEWgIlnx0OqOkMhuCxSXU49Bo/template/preview',
       '_blank'
     );
   };
