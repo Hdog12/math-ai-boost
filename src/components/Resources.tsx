@@ -15,7 +15,7 @@ const Resources = () => {
       buttons: [
         {
           text: 'Get Revision Sheet',
-          url: 'https://docs.google.com/spreadsheets/d/1C2nGNYV4nyfJ1TysAODarNmNPZMzKMMNj6lwM7VFJ4Q/template/preview',
+          url: 'https://docs.google.com/spreadsheets/d/1FadAtXk0JX2NJECDc-aEWgIlnx0OqOkMhuCxSXU49Bo/template/preview',
           variant: 'primary' as const
         }
       ]
