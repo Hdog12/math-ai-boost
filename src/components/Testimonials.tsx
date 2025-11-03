@@ -6,21 +6,21 @@ const Testimonials = () => {
 
   const testimonials = [
     {
-      name: 'Sarah M.',
-      grade: 'IB Student',
-      text: 'The revision videos helped me understand concepts I struggled with all year. Got a 6 in Math AI SL!',
-      rating: 5
-    },
-    {
-      name: 'Alex K.',
+      name: 'Lena T.',
       grade: 'IB Graduate',
-      text: 'The exam-style questions were exactly what I needed. The mock exams prepared me perfectly for the real thing.',
+      text: 'This sheet is literally a life saver. This resource was perfect because it had everything in one place. The explanations for each topic take you from A to Z and explain everything perfectly. I 1000% recommend this and I’m so happy to have found it!',
       rating: 5
     },
     {
-      name: 'Emma L.',
-      grade: 'IB Student',
-      text: 'Amazing resources! The revision sheet alone saved me so much time organizing my studies.',
+      name: 'Terrence M.',
+      grade: 'IB Graduate',
+      text: 'The videos are incredible; what you created is absolutely insane and an actual cheatcode for the IB.',
+      rating: 5
+    },
+    {
+      name: 'Naomi L.',
+      grade: 'IB Graduate',
+      text: 'I was quite scared of failing my exams and I’m sure without you I would have. I ended up getting literally the best grade in maths I’ve gotten in the entirety of my time in IB.',
       rating: 5
     },
     {
@@ -30,15 +30,15 @@ const Testimonials = () => {
       rating: 5
     },
     {
-      name: 'Maya S.',
-      grade: 'IB Student',
-      text: 'Best investment for IB Math! The complete study set gave me confidence going into my exams.',
+      name: 'Karthu B.',
+      grade: 'IB Graduate',
+      text: 'The resources provided me with a good complete revision covering all exam style questions and topics that are needed.',
       rating: 5
     },
     {
-      name: 'Tom R.',
+      name: 'Fatima R.',
       grade: 'IB Graduate',
-      text: 'The passing guarantee shows how confident they are in their materials. Highly recommend!',
+      text: 'The videos were very detailed and easy to understand. Revision village’s videos are nowhere near the great depth and detail your videos have. I know for a fact that I have done significantly better in my final exams because of your videos, and I genuinely do wish that I found out about it earlier',
       rating: 5
     }
   ];
