@@ -13,8 +13,17 @@ const FAQ = () => {
     },
     {
       question: "What's included in each package?",
-      answer: '<strong>Videos:</strong> 26 comprehensive videos covering all sub-topics in the Math AI SL syllabus (~9 hours total).<br><br><strong>Questions:</strong> 125 exam-style questions plus 2 complete mock exam sets focusing on tricky areas.<br><br><strong>Complete Set:</strong> Both the video course and all exam-style questions at a discounted price with our passing guarantee.'
+      answer: (
+        <>
+          <strong>Videos:</strong> 26 comprehensive videos covering all sub-topics in the Math AI SL syllabus (~9 hours total).
+          <br /><br />
+          <strong>Questions:</strong> 125 exam-style questions plus 2 complete mock exam sets focusing on tricky areas.
+          <br /><br />
+          <strong>Complete Set:</strong> Both the video course and all exam-style questions at a discounted price with our passing guarantee.
+        </>
+      )
     },
+
 
     {
       question: 'Do the resources cover the full syllabus?',
