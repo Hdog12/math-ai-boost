@@ -32,7 +32,7 @@ const Resources = () => {
       price: '€69',
       buttons: [
         {
-          text: 'Get Access to All Videos',
+          text: 'Get All Videos',
           url: 'https://buy.stripe.com/14keY4aNMcmq8zmaES',
           variant: 'primary' as const
         },
@@ -60,7 +60,7 @@ const Resources = () => {
       price: '€69',
       buttons: [
         {
-          text: 'Get Access to Exam-Style Questions',
+          text: 'Get Exam-Style Questions',
           url: 'https://buy.stripe.com/00gbLS7BAcmqeXK3cs',
           variant: 'primary' as const
         },
