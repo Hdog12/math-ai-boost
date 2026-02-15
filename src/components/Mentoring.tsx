@@ -54,10 +54,7 @@ const Mentoring = () => {
           <div className="space-y-6">
             <div className="prose prose-lg max-w-none">
               <p className="text-lg text-muted-foreground leading-relaxed">
-                We provide online 1-to-1 tutoring for Math AI and AA students. As current engineering students, we understand that no one knows what it’s like to be a student better than the students themselves. That’s what gives us the edge in tailoring our approaches to your learning. 
-              </p>
-              <p className="text-lg text-muted-foreground leading-relaxed">
-                We focus on student-centered approaches, adapting our teaching methods to your learning style and pace. Whether you're struggling with specific concepts, need help with exam preparation, or want to achieve the highest possible grades, our tutors provide the personalized support you need to succeed in Math AI or Math AA.
+                We provide online 1-to-1 tutoring for Math AI and AA students. As experienced tutors, we know how to break complex concepts down into simple terms. And as current engineering students, we understand that no one knows what it’s like to be a student better than the students themselves. That’s what gives us the edge in tailoring our approaches to your learning. 
               </p>
             </div>
 
