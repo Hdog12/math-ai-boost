@@ -5,14 +5,14 @@ const About = () => {
     {
       name: 'Javier',
       title: 'Co-Founder & IB Math Specialist',
-      description: 'DTU Engineering student and IB graduate with extensive experience in Math AI and AA. Passionate about helping students understand complex mathematical concepts through clear, structured teaching methods.',
+      description: 'Electrical engineering student and IB graduate with extensive experience in Math AI and AA. Passionate about helping students understand complex mathematical concepts through clear, structured teaching methods.',
       experience: '100+ tutoring hours',
       specialty: 'Math AI SL/HL'
     },
     {
       name: 'Frederik',
       title: 'Co-Founder & Curriculum Expert',
-      description: 'DTU Engineering student and IB graduate specializing in exam preparation and curriculum design. Expert in creating study materials that align perfectly with IB assessment criteria.',
+      description: 'Energy technology engineering student and IB graduate specializing in exam preparation and curriculum design. Expert in creating study materials that align perfectly with IB assessment criteria.',
       experience: '100+ tutoring hours',
       specialty: 'Math AA SL/HL'
     }
