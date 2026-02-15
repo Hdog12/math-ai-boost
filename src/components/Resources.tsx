@@ -77,7 +77,7 @@ const Resources = () => {
       bullets: [
         'ALL videos + ALL questions',
         'Special €99 (save 28%)',
-        '"PASSING GUARANTEE: if you do not pass your final, we refund the full cost."'
+        'PASSING GUARANTEE: if you do not pass your final, we refund the full cost.'
       ],
       price: '€99',
       isSpecial: true,
