@@ -4,15 +4,17 @@ const About = () => {
   const teamMembers = [
     {
       name: 'Javier',
-      title: 'Co-Founder',
-      description: 'Electrical engineering student and IB graduate with extensive experience in Math AI and AA. Passionate about helping students understand complex mathematical concepts through clear, structured teaching methods.',
+      title: 'Co-Founder & IB Math Specialist',
+      description: 'DTU Engineering student and IB graduate with extensive experience in Math AI and AA. Passionate about helping students understand complex mathematical concepts through clear, structured teaching methods.',
       experience: '100+ tutoring hours',
+      specialty: 'Math AI SL/HL'
     },
     {
       name: 'Frederik',
-      title: 'Co-Founder',
-      description: 'Energy technologies engineering student and IB graduate specializing in exam preparation and curriculum design. Expert in creating study materials that align perfectly with IB assessment criteria.',
+      title: 'Co-Founder & Curriculum Expert',
+      description: 'DTU Engineering student and IB graduate specializing in exam preparation and curriculum design. Expert in creating study materials that align perfectly with IB assessment criteria.',
       experience: '100+ tutoring hours',
+      specialty: 'Math AA SL/HL'
     }
   ];
 
@@ -24,7 +26,7 @@ const About = () => {
             Who We Are
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            Meet the team behind Mentoring CPH - experienced IB graduates and engineering students dedicated to your success.
+            Meet the team behind Mentoring CPH - experienced IB graduates and DTU engineering students dedicated to your success.
           </p>
         </div>
 
@@ -67,6 +69,11 @@ const About = () => {
                       <div className="text-sm text-muted-foreground">Student</div>
                     </div>
                   </div>
+
+                  <div className="bg-muted rounded-lg p-4">
+                    <div className="text-sm font-semibold text-foreground mb-1">
+                      Specialty
+                    </div>
                     <div className="text-primary font-medium">
                       {member.specialty}
                     </div>
@@ -115,5 +122,3 @@ const About = () => {
     </section>
   );
 };
-
-export default About;
