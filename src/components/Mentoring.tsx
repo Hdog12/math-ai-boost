@@ -54,7 +54,7 @@ const Mentoring = () => {
           <div className="space-y-6">
             <div className="prose prose-lg max-w-none">
               <p className="text-lg text-muted-foreground leading-relaxed">
-                Our 1-to-1 online tutoring sessions are led by DTU engineering students who have successfully completed the IB program themselves. With over 200 hours of combined tutoring experience specifically in IB Mathematics, we understand the unique challenges students face and know exactly how to help you overcome them.
+                We provide online 1-to-1 tutoring for Math AI and AA students. As current engineering students, we understand that no one knows what it’s like to be a student better than the students themselves. That’s what gives us the edge in tailoring our approaches to your learning. 
               </p>
               <p className="text-lg text-muted-foreground leading-relaxed">
                 We focus on student-centered approaches, adapting our teaching methods to your learning style and pace. Whether you're struggling with specific concepts, need help with exam preparation, or want to achieve the highest possible grades, our tutors provide the personalized support you need to succeed in Math AI or Math AA.
@@ -67,8 +67,8 @@ const Mentoring = () => {
               <div className="space-y-3">
                 {[
                   '200+ hours of IB Math tutoring experience',
-                  'DTU engineering students with proven academic excellence',
                   'IB graduates who understand the curriculum inside-out',
+                  'Engineering students with proven academic excellence',
                   'Flexible scheduling to fit your timezone',
                   'Personalized lesson plans based on your needs',
                   'Both Math AI SL/HL and Math AA SL/HL covered'
