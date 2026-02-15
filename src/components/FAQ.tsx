@@ -9,7 +9,7 @@ const FAQ = () => {
   const faqs = [
     {
       question: 'What is Mentoring CPH and who is it for?',
-      answer: 'Mentoring CPH is an educational platform created by experienced tutors who are also IB graduates. We specialize in Math AI SL resources and tutoring, designed specifically for IB students who want to excel in their mathematics studies. Our materials are perfect for students at any level, from those struggling with concepts to those aiming for top grades.'
+      answer: 'Mentoring CPH is an educational platform created by experienced tutors and IB graduates. We specialize in Math AI SL resources and tutoring, designed specifically for IB students who want to excel in their mathematics studies. Our materials are perfect for students at any level, from those struggling with concepts to those aiming for top grades.'
     },
     { question: "What's included in each package?", 
       answer: 'Videos: 26 comprehensive videos covering all sub-topics in the Math AI SL syllabus (~9 hours total).\n\nQuestions: 125 exam-style questions plus 2 complete mock exam sets focusing on tricky areas.\n\nComplete Set: Both the video course and all exam-style questions at a discounted price with our passing guarantee.' 
