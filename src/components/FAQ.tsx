@@ -9,11 +9,11 @@ const FAQ = () => {
   const faqs = [
     {
       question: 'What is Mentoring CPH and who is it for?',
-      answer: 'Mentoring CPH is an educational platform created by DTU engineering students who are IB graduates. We specialize in Math AI SL resources and tutoring, designed specifically for IB students who want to excel in their mathematics studies. Our materials are perfect for students at any level, from those struggling with concepts to those aiming for top grades.'
+      answer: 'Mentoring CPH is an educational platform created by experienced tutors who are also IB graduates. We specialize in Math AI SL resources and tutoring, designed specifically for IB students who want to excel in their mathematics studies. Our materials are perfect for students at any level, from those struggling with concepts to those aiming for top grades.'
     },
     {
       question: "What's included in each package?",
-      answer: 'Videos: 26 comprehensive videos covering all sub-topics in the Math AI SL syllabus (~9 hours total). Questions: 125 exam-style questions plus 2 complete mock exam sets focusing on tricky areas. Complete Set: Both the video course and all exam-style questions at a discounted price with our passing guarantee.'
+      answer: 'Videos: 26 comprehensive videos covering all sub-topics in the Math AI SL syllabus (~9 hours total). \n Questions: 125 exam-style questions plus 2 complete mock exam sets focusing on tricky areas. \n Complete Set: Both the video course and all exam-style questions at a discounted price with our passing guarantee.'
     },
     {
       question: 'Do the resources cover the full syllabus?',
@@ -29,7 +29,7 @@ const FAQ = () => {
     },
     {
       question: 'What is the "passing guarantee"?',
-      answer: 'Our passing guarantee applies to the Complete Study Set (€99). If you complete all our materials and still don\'t pass your final IB Math AI SL exam, we will refund the full cost. See our Passing Guarantee PDF for complete terms and conditions.'
+      answer: 'Our passing guarantee applies to the Complete Study Set. If you complete all our materials and still don\'t pass your final IB Math AI SL exam, we will refund the full cost. See our Passing Guarantee PDF for complete terms and conditions.'
     },
     {
       question: 'Can I share the resources?',
