@@ -152,9 +152,7 @@
   }
   .res-card:hover { background: var(--mid); }
   .res-card:hover::after { transform: scaleX(1); }
-  .res-icon {
-    font-size: 1.6rem; margin-bottom: 1rem; line-height: 1;
-  }
+  .res-icon { font-size: 1.6rem; margin-bottom: 1rem; line-height: 1; }
   .res-tag {
     font-size: 0.62rem; letter-spacing: 0.18em; text-transform: uppercase;
     color: var(--gold); margin-bottom: 0.6rem;
@@ -182,25 +180,16 @@
   .res-btn:hover { background: var(--gold); color: var(--bg); border-color: var(--gold); }
   .res-btn.primary { background: var(--gold); color: var(--bg); border-color: var(--gold); }
   .res-btn.primary:hover { background: var(--gold-lt); border-color: var(--gold-lt); }
-
-  /* Passing guarantee badge on bundle card */
   .guarantee-badge {
-    display: flex; align-items: center; gap: 0.5rem;
+    display: flex; align-items: flex-start; gap: 0.5rem;
     background: var(--green-badge);
     border: 1px solid rgba(126,200,160,0.25);
     border-radius: 2px; padding: 0.55rem 0.8rem;
     margin-top: 0.9rem; margin-bottom: 0.2rem;
   }
-  .guarantee-badge .g-icon { font-size: 0.9rem; flex-shrink: 0; }
-  .guarantee-badge p {
-    font-size: 0.75rem; color: var(--green-text); line-height: 1.4;
-    flex: 1;
-  }
-  .guarantee-badge p a {
-    color: var(--green-text); text-decoration: underline;
-    text-underline-offset: 2px; opacity: 0.8;
-    transition: opacity 0.2s;
-  }
+  .guarantee-badge .g-icon { font-size: 0.9rem; flex-shrink: 0; margin-top: 0.1rem; }
+  .guarantee-badge p { font-size: 0.75rem; color: var(--green-text); line-height: 1.4; flex: 1; }
+  .guarantee-badge p a { color: var(--green-text); text-decoration: underline; text-underline-offset: 2px; opacity: 0.8; transition: opacity 0.2s; }
   .guarantee-badge p a:hover { opacity: 1; }
   .best-value-ribbon {
     position: absolute; top: 1rem; right: 1rem;
@@ -238,12 +227,8 @@
   }
   .t-price span { font-size: 0.85rem; color: var(--muted); font-family: 'DM Sans', sans-serif; font-weight: 300; }
   .t-card > p { font-size: 0.87rem; color: var(--muted); line-height: 1.75; }
-  .t-card ul {
-    list-style: none; margin-top: 1rem; display: flex; flex-direction: column; gap: 0.45rem;
-  }
-  .t-card ul li {
-    font-size: 0.84rem; color: var(--muted); padding-left: 1.1rem; position: relative;
-  }
+  .t-card ul { list-style: none; margin-top: 1rem; display: flex; flex-direction: column; gap: 0.45rem; }
+  .t-card ul li { font-size: 0.84rem; color: var(--muted); padding-left: 1.1rem; position: relative; }
   .t-card ul li::before { content: '–'; position: absolute; left: 0; color: var(--gold); }
   .t-cta { margin-top: 2rem; display: inline-block; }
 
@@ -259,111 +244,52 @@
     display: grid; grid-template-columns: 1.1fr 1fr; gap: 5rem; align-items: start;
     position: relative;
   }
-  .schools-text p {
-    color: var(--muted); line-height: 1.8; margin-top: 1.2rem; font-size: 0.95rem; font-weight: 300;
-  }
+  .schools-text p { color: var(--muted); line-height: 1.8; margin-top: 1.2rem; font-size: 0.95rem; font-weight: 300; }
   .schools-text .btn-gold { margin-top: 2rem; display: inline-block; }
   .schools-feats { display: flex; flex-direction: column; }
-  .feat {
-    display: flex; gap: 1rem; align-items: flex-start;
-    padding: 1.2rem 0; border-bottom: 1px solid var(--border);
-  }
+  .feat { display: flex; gap: 1rem; align-items: flex-start; padding: 1.2rem 0; border-bottom: 1px solid var(--border); }
   .feat:first-child { padding-top: 0; }
   .feat:last-child { border-bottom: none; }
   .feat-icon { font-size: 1rem; flex-shrink: 0; margin-top: 0.1rem; }
-  .feat h4 {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 1.05rem; color: var(--white); font-weight: 400; margin-bottom: 0.2rem;
-  }
+  .feat h4 { font-family: 'Cormorant Garamond', serif; font-size: 1.05rem; color: var(--white); font-weight: 400; margin-bottom: 0.2rem; }
   .feat p { font-size: 0.82rem; color: var(--muted); line-height: 1.6; }
 
   /* ── ABOUT ── */
   .about { background: var(--bg); }
-  .about-grid {
-    display: grid; grid-template-columns: 1fr 1fr; gap: 5rem; align-items: start;
-  }
-  .about-text p {
-    color: var(--muted); line-height: 1.85; margin-top: 1.2rem;
-    font-size: 0.95rem; font-weight: 300;
-  }
+  .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 5rem; align-items: start; }
+  .about-text p { color: var(--muted); line-height: 1.85; margin-top: 1.2rem; font-size: 0.95rem; font-weight: 300; }
   .about-people { display: flex; flex-direction: column; gap: 1px; }
-  .person {
-    background: var(--mid); padding: 2rem 2.2rem;
-    border-left: 2px solid var(--gold); transition: background 0.3s;
-  }
+  .person { background: var(--mid); padding: 2rem 2.2rem; border-left: 2px solid var(--gold); transition: background 0.3s; }
   .person:hover { background: var(--surface); }
-  .person-name {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 1.3rem; color: var(--white); font-weight: 400; margin-bottom: 0.2rem;
-  }
-  .person-role {
-    font-size: 0.67rem; letter-spacing: 0.18em; text-transform: uppercase;
-    color: var(--gold); margin-bottom: 0.7rem;
-  }
+  .person-name { font-family: 'Cormorant Garamond', serif; font-size: 1.3rem; color: var(--white); font-weight: 400; margin-bottom: 0.2rem; }
+  .person-role { font-size: 0.67rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--gold); margin-bottom: 0.7rem; }
   .person p { font-size: 0.84rem; color: var(--muted); line-height: 1.65; }
 
   /* ── CONTACT ── */
   .contact { background: var(--deep); }
   .contact-inner { max-width: 680px; }
-  .contact-details {
-    margin-top: 2.5rem; border: 1px solid var(--border);
-  }
-  .contact-row {
-    display: flex; align-items: center; gap: 1.2rem;
-    padding: 1.4rem 1.8rem; border-bottom: 1px solid var(--border);
-    transition: background 0.3s;
-  }
+  .contact-details { margin-top: 2.5rem; border: 1px solid var(--border); }
+  .contact-row { display: flex; align-items: center; gap: 1.2rem; padding: 1.4rem 1.8rem; border-bottom: 1px solid var(--border); transition: background 0.3s; }
   .contact-row:last-child { border-bottom: none; }
   .contact-row:hover { background: var(--mid); }
   .c-icon { font-size: 1.1rem; flex-shrink: 0; }
-  .c-label {
-    font-size: 0.64rem; letter-spacing: 0.18em; text-transform: uppercase;
-    color: var(--gold); margin-bottom: 0.2rem;
-  }
-  .contact-row a, .contact-row span {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 1.15rem; color: var(--white); text-decoration: none; transition: color 0.3s;
-  }
+  .c-label { font-size: 0.64rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--gold); margin-bottom: 0.2rem; }
+  .contact-row a, .contact-row span { font-family: 'Cormorant Garamond', serif; font-size: 1.15rem; color: var(--white); text-decoration: none; transition: color 0.3s; }
   .contact-row a:hover { color: var(--gold-lt); }
-  .contact-note {
-    margin-top: 1.5rem; font-size: 0.83rem; color: var(--muted); line-height: 1.7;
-  }
+  .contact-note { margin-top: 1.5rem; font-size: 0.83rem; color: var(--muted); line-height: 1.7; }
 
   /* ── FOOTER ── */
-  footer {
-    background: #060d09; padding: 2.2rem 4rem;
-    border-top: 1px solid var(--border);
-  }
-  .footer-top {
-    display: flex; justify-content: space-between; align-items: center;
-    flex-wrap: wrap; gap: 1rem; margin-bottom: 1.2rem;
-    padding-bottom: 1.2rem; border-bottom: 1px solid var(--border);
-  }
-  .f-logo {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 1.15rem; color: var(--gold-lt); letter-spacing: 0.1em;
-  }
+  footer { background: #060d09; padding: 2.2rem 4rem; border-top: 1px solid var(--border); }
+  .footer-top { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; margin-bottom: 1.2rem; padding-bottom: 1.2rem; border-bottom: 1px solid var(--border); }
+  .f-logo { font-family: 'Cormorant Garamond', serif; font-size: 1.15rem; color: var(--gold-lt); letter-spacing: 0.1em; }
   footer p { font-size: 0.75rem; color: var(--muted); }
-  .footer-links {
-    display: flex; gap: 2rem; flex-wrap: wrap;
-  }
-  .footer-links a {
-    font-size: 0.72rem; color: var(--muted); text-decoration: none;
-    letter-spacing: 0.1em; text-transform: uppercase;
-    transition: color 0.3s; border-bottom: 1px solid transparent;
-  }
+  .footer-links { display: flex; gap: 2rem; flex-wrap: wrap; }
+  .footer-links a { font-size: 0.72rem; color: var(--muted); text-decoration: none; letter-spacing: 0.1em; text-transform: uppercase; transition: color 0.3s; border-bottom: 1px solid transparent; }
   .footer-links a:hover { color: var(--gold-lt); border-bottom-color: var(--gold-lt); }
-  .footer-bottom {
-    display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 0.5rem;
-  }
+  .footer-bottom { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 0.5rem; }
 
-  /* ── ANIM ── */
-  @keyframes fadeUp {
-    from { opacity: 0; transform: translateY(22px); }
-    to   { opacity: 1; transform: translateY(0); }
-  }
+  @keyframes fadeUp { from { opacity: 0; transform: translateY(22px); } to { opacity: 1; transform: translateY(0); } }
 
-  /* ── RESPONSIVE ── */
   @media (max-width: 960px) {
     nav { padding: 1.1rem 1.8rem; }
     nav ul { display: none; }
@@ -380,6 +306,38 @@
 </style>
 </head>
 <body>
+
+<!-- ============================================================
+     LINKS — edit all your URLs here, then forget about the rest
+     ============================================================ -->
+<script>
+  const LINKS = {
+    // Resources
+    sheet:     "https://docs.google.com/spreadsheets/d/1Z6IUP6xAYKr59qOOxNqJCna44yMcdc_RnVV93WTXF4M/template/preview",   // Free revision summary sheet
+    course:    "https://buy.stripe.com/7sY8wP4OW146gBK4gm9sk0j",   // Video course (€39)
+    questions: "https://buy.stripe.com/eVq6oHa9gdQS71a0069sk0h",   // Exam-style questions (€39)
+    bundle:    "https://buy.stripe.com/5kQcN52GOfZ0fxG7sy9sk0i",   // Complete study set (€69)
+
+    // Tutoring
+    private:   "https://YOUR-LINK-HERE",   // Book 1-on-1 session (€50/h)
+    group:     "https://YOUR-LINK-HERE",   // Join group session (€20/h)
+
+    // Schools
+    schools:   "https://YOUR-LINK-HERE",   // School licence enquiry
+
+    // Legal
+    guarantee: "https://drive.google.com/file/d/1UXKHCBEadbgW2dtMV30e3PJQk445nFuQ/view?usp=sharing",   // Passing guarantee page
+    terms:     "https://drive.google.com/file/d/11sNyNx4URC0iaPCP2-7LAnogyVaqr7v5/view?usp=sharing",   // Terms & Conditions
+  };
+
+  // Inject all links after page loads
+  document.addEventListener("DOMContentLoaded", () => {
+    document.querySelectorAll("[data-link]").forEach(el => {
+      const key = el.getAttribute("data-link");
+      if (LINKS[key]) el.href = LINKS[key];
+    });
+  });
+</script>
 
 <!-- NAV -->
 <nav>
@@ -416,18 +374,16 @@
     <p class="section-body" style="max-width:540px; margin-top:0.4rem;">All materials are built specifically for IB Math AI SL, mapped to the current syllabus, and structured around the exam. Start for free, or go all-in with the complete study set.</p>
     <div class="res-grid">
 
-      <!-- Free Sheet -->
       <div class="res-card">
         <div class="res-icon">📄</div>
         <div class="res-tag">Free Download</div>
-        <h3>Revision Sheet</h3>
-        <p>A concise summary of all key formulas, concepts, and definitions across the AI SL syllabus. Perfect for structured, stress-free revision.</p>
+        <h3>Revision Summary Sheet</h3>
+        <p>A concise summary of all key formulas, concepts, and definitions across the AI SL syllabus. Perfect for last-minute revision.</p>
         <div class="res-price free">Free</div>
         <div class="res-price-note">No signup required</div>
-        <a href="#REPLACE_WITH_SHEET_LINK" class="res-btn">Download Free</a>
+        <a data-link="sheet" href="#" class="res-btn">Download Free</a>
       </div>
 
-      <!-- Video Course -->
       <div class="res-card">
         <div class="res-icon">🎬</div>
         <div class="res-tag">Video Course</div>
@@ -435,34 +391,32 @@
         <p>Topic-by-topic video lessons covering the full AI SL syllabus. Clear explanations, worked examples, and exam-focused walkthroughs.</p>
         <div class="res-price">€39</div>
         <div class="res-price-note">One-time purchase · Lifetime access</div>
-        <a href="#REPLACE_WITH_COURSE_LINK" class="res-btn">Buy Course</a>
+        <a data-link="course" href="#" class="res-btn">Buy Course</a>
       </div>
 
-      <!-- Exam Questions -->
       <div class="res-card">
         <div class="res-icon">✏️</div>
         <div class="res-tag">Practice Questions</div>
         <h3>Exam-Style Questions</h3>
-        <p>A full bank of exam-style questions and mock exams covering all topics, with mark-scheme style worked solutions so you can check your work properly. </p>
+        <p>A full bank of exam-style questions covering all topics, with mark-scheme style worked solutions so you can check your work properly.</p>
         <div class="res-price">€39</div>
-        <div class="res-price-note">One-time purchase · Lifetime access</div>
-        <a href="#REPLACE_WITH_QUESTIONS_LINK" class="res-btn">Buy Questions</a>
+        <div class="res-price-note">All topics included</div>
+        <a data-link="questions" href="#" class="res-btn">Buy Questions</a>
       </div>
 
-      <!-- Complete Bundle -->
       <div class="res-card">
         <div class="best-value-ribbon">Best Value</div>
         <div class="res-icon">📦</div>
         <div class="res-tag">Bundle</div>
         <h3>Complete Study Set</h3>
-        <p>Everything in one package — the video course, exam-style questions, and revision sheet. The most complete way to prepare for your AI SL exam.</p>
+        <p>Everything in one package — the video course, exam-style questions, and summary sheet. The most complete way to prepare for your AI SL exam.</p>
         <div class="res-price">€69</div>
-        <div class="res-price-note">One-time purchase · Lifetime access</div>
+        <div class="res-price-note">Save €9 vs. buying separately</div>
         <div class="guarantee-badge">
           <span class="g-icon">🛡️</span>
-          <p>Passing guarantee included — if you don't pass your IB Math AI SL exam, we refund your purchase. <a href="#REPLACE_WITH_GUARANTEE_LINK">Learn more</a></p>
+          <p>Passing guarantee included — if you don't pass your IB Math AI SL exam, we refund your purchase. <a data-link="guarantee" href="#">Learn more</a></p>
         </div>
-        <a href="#REPLACE_WITH_BUNDLE_LINK" class="res-btn primary" style="margin-top:1.2rem;">Buy Bundle</a>
+        <a data-link="bundle" href="#" class="res-btn primary" style="margin-top:1.2rem;">Buy Bundle</a>
       </div>
 
     </div>
@@ -488,7 +442,7 @@
           <li>Exam revision & past paper practice</li>
           <li>Online or in person</li>
         </ul>
-        <a href="#REPLACE_WITH_BOOKING_LINK" class="btn-gold t-cta">Book a Session</a>
+        <a data-link="private" href="#" class="btn-gold t-cta">Book a Session</a>
       </div>
 
       <div class="t-card">
@@ -502,7 +456,7 @@
           <li>Structured around syllabus topics or past papers</li>
           <li>Ideal for exam season preparation</li>
         </ul>
-        <a href="#REPLACE_WITH_BOOKING_LINK" class="btn-gold t-cta">Join a Group Session</a>
+        <a data-link="group" href="#" class="btn-gold t-cta">Join a Group Session</a>
       </div>
 
     </div>
@@ -518,37 +472,13 @@
         <h2>School licences for<br><em>IB Math AI SL</em></h2>
         <p>Give your whole cohort access to our full resource library under a single school licence. Integrate the materials alongside your teaching, or let students use them independently for self-study.</p>
         <p>Licences are available per academic year with transparent pricing that scales with cohort size. Reach out and we'll arrange a short consultation.</p>
-        <a href="#REPLACE_WITH_SCHOOL_INQUIRY_LINK" class="btn-gold">Enquire About a Licence</a>
+        <a data-link="schools" href="#" class="btn-gold">Enquire About a Licence</a>
       </div>
       <div class="schools-feats">
-        <div class="feat">
-          <div class="feat-icon">📚</div>
-          <div>
-            <h4>Full Resource Library Access</h4>
-            <p>All students get the complete AI SL resource library for the licence period.</p>
-          </div>
-        </div>
-        <div class="feat">
-          <div class="feat-icon">🎯</div>
-          <div>
-            <h4>Syllabus-Aligned Content</h4>
-            <p>Every resource maps directly to the current IB Math AI SL syllabus.</p>
-          </div>
-        </div>
-        <div class="feat">
-          <div class="feat-icon">📊</div>
-          <div>
-            <h4>Transparent Pricing</h4>
-            <p>Per-year licences with pricing based on cohort size. No hidden fees.</p>
-          </div>
-        </div>
-        <div class="feat">
-          <div class="feat-icon">💬</div>
-          <div>
-            <h4>Onboarding Included</h4>
-            <p>A short call to help you integrate the resources into your programme.</p>
-          </div>
-        </div>
+        <div class="feat"><div class="feat-icon">📚</div><div><h4>Full Resource Library Access</h4><p>All students get the complete AI SL resource library for the licence period.</p></div></div>
+        <div class="feat"><div class="feat-icon">🎯</div><div><h4>Syllabus-Aligned Content</h4><p>Every resource maps directly to the current IB Math AI SL syllabus.</p></div></div>
+        <div class="feat"><div class="feat-icon">📊</div><div><h4>Transparent Pricing</h4><p>Per-year licences with pricing based on cohort size. No hidden fees.</p></div></div>
+        <div class="feat"><div class="feat-icon">💬</div><div><h4>Onboarding Included</h4><p>A short call to help you integrate the resources into your programme.</p></div></div>
       </div>
     </div>
   </div>
@@ -614,8 +544,8 @@
   <div class="footer-top">
     <div class="f-logo">Mentoring CPH</div>
     <div class="footer-links">
-      <a href="#REPLACE_WITH_GUARANTEE_LINK">Passing Guarantee</a>
-      <a href="#REPLACE_WITH_TC_LINK">Terms &amp; Conditions</a>
+      <a data-link="guarantee" href="#">Passing Guarantee</a>
+      <a data-link="terms" href="#">Terms &amp; Conditions</a>
       <a href="mailto:info@mentoringcph.com">info@mentoringcph.com</a>
     </div>
   </div>
