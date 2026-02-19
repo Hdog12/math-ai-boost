@@ -29,11 +29,11 @@ const Resources = () => {
         '€69 for all, €3 per single video',
         'FREE demo available'
       ],
-      price: '€69',
+      price: '€39',
       buttons: [
         {
           text: 'Get All Videos',
-          url: 'https://buy.stripe.com/14keY4aNMcmq8zmaES',
+          url: 'https://buy.stripe.com/7sY8wP4OW146gBK4gm9sk0j',
           variant: 'primary' as const
         },
         {
@@ -57,11 +57,11 @@ const Resources = () => {
         '€69',
         'FREE demo available'
       ],
-      price: '€69',
+      price: '€39',
       buttons: [
         {
           text: 'Get Exam-Style Questions',
-          url: 'https://buy.stripe.com/00gbLS7BAcmqeXK3cs',
+          url: 'https://buy.stripe.com/eVq6oHa9gdQS71a0069sk0h',
           variant: 'primary' as const
         },
         {
@@ -79,12 +79,12 @@ const Resources = () => {
         'Special €99 (save 28%)',
         'PASSING GUARANTEE: if you do not pass your final, we refund the full cost.'
       ],
-      price: '€99',
+      price: '€69',
       isSpecial: true,
       buttons: [
         {
           text: 'Get Complete Study Set',
-          url: 'https://buy.stripe.com/bIY17edZY72602QdR3',
+          url: 'https://buy.stripe.com/5kQcN52GOfZ0fxG7sy9sk0i',
           variant: 'primary' as const
         }
       ]
