@@ -26,7 +26,7 @@ const Resources = () => {
         '26 videos (~9 hours total)',
         'Tailored to the full syllabus',
         'Explains what IB expects',
-        '€69 for all, €3 per single video',
+        '€39 for all, €3 per single video',
         'FREE demo available'
       ],
       price: '€39',
@@ -54,7 +54,7 @@ const Resources = () => {
       bullets: [
         '125 questions + 2 full mock exam sets',
         'Focus on tricky areas',
-        '€69',
+        '€39',
         'FREE demo available'
       ],
       price: '€39',
@@ -76,7 +76,7 @@ const Resources = () => {
       title: 'Complete Study Set',
       bullets: [
         'ALL videos + ALL questions',
-        'Special €99 (save 28%)',
+        'Special €69 (save 28%)',
         'PASSING GUARANTEE: if you do not pass your final, we refund the full cost.'
       ],
       price: '€69',
