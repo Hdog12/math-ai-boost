@@ -1,35 +1,629 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Math AI SL Revision Resources | Mentoring CPH</title>
-    <meta name="description" content="IB Math AI SL revision resources including video courses, exam-style questions, and study sheets. Get expert help from DTU engineering students with 200+ tutoring hours." />
-    <meta name="author" content="Mentoring CPH" />
-    <meta name="keywords" content="IB Math AI SL, IB Mathematics, revision resources, exam preparation, tutoring, Denmark, Copenhagen" />
-    
-    <link rel="canonical" href="https://mentoringcph.com" />
-    
-    <!-- Open Graph / Social Media -->
-    <meta property="og:title" content="Math AI SL Revision Resources | Mentoring CPH" />
-    <meta property="og:description" content="IB Math AI SL revision resources including video courses, exam-style questions, and study sheets. Get expert help from DTU engineering students." />
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://mentoringcph.com" />
-    <meta property="og:site_name" content="Mentoring CPH" />
-    
-    <!-- Twitter Card -->
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Math AI SL Revision Resources | Mentoring CPH" />
-    <meta name="twitter:description" content="IB Math AI SL revision resources including video courses, exam-style questions, and study sheets." />
-    
-    <!-- Additional SEO -->
-    <meta name="robots" content="index, follow" />
-    <meta name="googlebot" content="index, follow" />
-    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
-  </head>
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Mentoring CPH — IB Math Resources & Tutoring</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg:      #0e1a14;
+    --deep:    #111f18;
+    --mid:     #172a1f;
+    --surface: #1c3226;
+    --gold:    #c9a84c;
+    --gold-lt: #e2c878;
+    --cream:   #f0ede6;
+    --white:   #fdfcf9;
+    --muted:   #7a9e8a;
+    --border:  rgba(201,168,76,0.18);
+    --green-badge: rgba(126,200,160,0.12);
+    --green-text: #7ec8a0;
+  }
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: 'DM Sans', sans-serif;
+    background: var(--bg);
+    color: var(--cream);
+    overflow-x: hidden;
+  }
 
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.tsx"></script>
-  </body>
+  /* ── NAV ── */
+  nav {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+    display: flex; justify-content: space-between; align-items: center;
+    padding: 1.2rem 4rem;
+    background: rgba(14,26,20,0.92);
+    backdrop-filter: blur(16px);
+    border-bottom: 1px solid var(--border);
+  }
+  .logo {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.45rem; font-weight: 300; letter-spacing: 0.12em;
+    color: var(--gold-lt); text-decoration: none;
+  }
+  nav ul { list-style: none; display: flex; gap: 2rem; align-items: center; }
+  nav ul a {
+    text-decoration: none; color: var(--muted);
+    font-size: 0.76rem; letter-spacing: 0.13em; text-transform: uppercase;
+    transition: color 0.3s; white-space: nowrap;
+  }
+  nav ul a:hover { color: var(--gold-lt); }
+  .nav-cta {
+    background: var(--gold) !important; color: var(--bg) !important;
+    padding: 0.45rem 1.3rem; border-radius: 2px;
+    font-weight: 500 !important; transition: background 0.3s !important;
+  }
+  .nav-cta:hover { background: var(--gold-lt) !important; }
+
+  /* ── HERO ── */
+  .hero {
+    min-height: 100vh;
+    display: flex; align-items: center;
+    padding: 0 4rem;
+    position: relative; overflow: hidden;
+  }
+  .hero-bg {
+    position: absolute; inset: 0;
+    background:
+      radial-gradient(ellipse 70% 60% at 65% 50%, rgba(201,168,76,0.06) 0%, transparent 70%),
+      linear-gradient(150deg, #0e1a14 0%, #111f18 60%, #0a1510 100%);
+  }
+  .hero-grid {
+    position: absolute; inset: 0;
+    background-image:
+      linear-gradient(rgba(201,168,76,0.03) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(201,168,76,0.03) 1px, transparent 1px);
+    background-size: 64px 64px;
+  }
+  .hero-content {
+    position: relative; max-width: 640px;
+    animation: fadeUp 0.9s ease both;
+  }
+  .eyebrow {
+    display: flex; align-items: center; gap: 0.8rem;
+    font-size: 0.7rem; letter-spacing: 0.25em; text-transform: uppercase;
+    color: var(--gold); margin-bottom: 1.6rem;
+  }
+  .eyebrow::before { content:''; display:block; width:28px; height:1px; background:var(--gold); }
+  h1 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(2.8rem, 5.5vw, 5rem);
+    font-weight: 300; line-height: 1.1;
+    color: var(--white); margin-bottom: 1.4rem;
+  }
+  h1 em { font-style: italic; color: var(--gold-lt); }
+  .hero-sub {
+    font-size: 1rem; line-height: 1.75; color: var(--muted);
+    max-width: 480px; margin-bottom: 2.5rem; font-weight: 300;
+  }
+  .btn-row { display: flex; gap: 1rem; flex-wrap: wrap; }
+  .btn-gold {
+    display: inline-block; padding: 0.85rem 2rem;
+    background: var(--gold); color: var(--bg);
+    font-size: 0.78rem; letter-spacing: 0.12em; text-transform: uppercase;
+    text-decoration: none; font-weight: 500; border-radius: 2px;
+    transition: background 0.3s, transform 0.2s;
+  }
+  .btn-gold:hover { background: var(--gold-lt); transform: translateY(-2px); }
+  .btn-outline {
+    display: inline-block; padding: 0.85rem 2rem;
+    border: 1px solid rgba(201,168,76,0.35); color: var(--gold-lt);
+    font-size: 0.78rem; letter-spacing: 0.12em; text-transform: uppercase;
+    text-decoration: none; border-radius: 2px;
+    transition: border-color 0.3s, background 0.3s;
+  }
+  .btn-outline:hover { border-color: var(--gold); background: rgba(201,168,76,0.07); }
+
+  /* ── SHARED ── */
+  section { padding: 6.5rem 4rem; }
+  .inner { max-width: 1060px; margin: 0 auto; }
+  .section-label {
+    font-size: 0.67rem; letter-spacing: 0.25em; text-transform: uppercase;
+    color: var(--gold); margin-bottom: 0.8rem;
+  }
+  h2 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(1.9rem, 3.5vw, 3rem);
+    font-weight: 300; color: var(--white); line-height: 1.2; margin-bottom: 1rem;
+  }
+  h2 em { font-style: italic; color: var(--gold-lt); }
+  .section-body {
+    color: var(--muted); font-size: 0.95rem; line-height: 1.8; font-weight: 300;
+  }
+
+  /* ── RESOURCES ── */
+  .resources { background: var(--deep); }
+  .res-grid {
+    display: grid; grid-template-columns: repeat(4, 1fr);
+    gap: 1px; background: var(--border); margin-top: 3rem;
+  }
+  .res-card {
+    background: var(--deep); padding: 2.2rem 1.8rem;
+    position: relative; overflow: hidden; transition: background 0.3s;
+    display: flex; flex-direction: column;
+  }
+  .res-card::after {
+    content: ''; position: absolute; top: 0; left: 0; right: 0; height: 2px;
+    background: var(--gold); transform: scaleX(0); transform-origin: left;
+    transition: transform 0.35s;
+  }
+  .res-card:hover { background: var(--mid); }
+  .res-card:hover::after { transform: scaleX(1); }
+  .res-icon {
+    font-size: 1.6rem; margin-bottom: 1rem; line-height: 1;
+  }
+  .res-tag {
+    font-size: 0.62rem; letter-spacing: 0.18em; text-transform: uppercase;
+    color: var(--gold); margin-bottom: 0.6rem;
+  }
+  .res-card h3 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.2rem; font-weight: 400; color: var(--white);
+    margin-bottom: 0.7rem; line-height: 1.3;
+  }
+  .res-card p { font-size: 0.83rem; color: var(--muted); line-height: 1.65; flex: 1; }
+  .res-price {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 2rem; color: var(--gold-lt); font-weight: 300;
+    margin: 1.2rem 0 0.15rem; line-height: 1;
+  }
+  .res-price.free { color: var(--green-text); }
+  .res-price-note { font-size: 0.71rem; color: var(--muted); margin-bottom: 1.2rem; }
+  .res-btn {
+    display: inline-block; padding: 0.65rem 1.3rem;
+    background: transparent; border: 1px solid var(--border);
+    color: var(--gold-lt); font-size: 0.72rem; letter-spacing: 0.11em; text-transform: uppercase;
+    text-decoration: none; border-radius: 2px; transition: all 0.3s;
+    align-self: flex-start;
+  }
+  .res-btn:hover { background: var(--gold); color: var(--bg); border-color: var(--gold); }
+  .res-btn.primary { background: var(--gold); color: var(--bg); border-color: var(--gold); }
+  .res-btn.primary:hover { background: var(--gold-lt); border-color: var(--gold-lt); }
+
+  /* Passing guarantee badge on bundle card */
+  .guarantee-badge {
+    display: flex; align-items: center; gap: 0.5rem;
+    background: var(--green-badge);
+    border: 1px solid rgba(126,200,160,0.25);
+    border-radius: 2px; padding: 0.55rem 0.8rem;
+    margin-top: 0.9rem; margin-bottom: 0.2rem;
+  }
+  .guarantee-badge .g-icon { font-size: 0.9rem; flex-shrink: 0; }
+  .guarantee-badge p {
+    font-size: 0.75rem; color: var(--green-text); line-height: 1.4;
+    flex: 1;
+  }
+  .guarantee-badge p a {
+    color: var(--green-text); text-decoration: underline;
+    text-underline-offset: 2px; opacity: 0.8;
+    transition: opacity 0.2s;
+  }
+  .guarantee-badge p a:hover { opacity: 1; }
+  .best-value-ribbon {
+    position: absolute; top: 1rem; right: 1rem;
+    font-size: 0.58rem; letter-spacing: 0.14em; text-transform: uppercase;
+    background: rgba(201,168,76,0.14); color: var(--gold);
+    border: 1px solid var(--border); padding: 0.2rem 0.55rem; border-radius: 1px;
+  }
+
+  /* ── TUTORING ── */
+  .tutoring { background: var(--bg); }
+  .tutoring-grid {
+    display: grid; grid-template-columns: 1fr 1fr; gap: 1px;
+    background: var(--border); margin-top: 3rem;
+  }
+  .t-card {
+    background: var(--bg); padding: 2.8rem;
+    position: relative; overflow: hidden; transition: background 0.3s;
+  }
+  .t-card::after {
+    content: ''; position: absolute; top: 0; left: 0; right: 0; height: 2px;
+    background: var(--gold); transform: scaleX(0); transform-origin: left;
+    transition: transform 0.35s;
+  }
+  .t-card:hover { background: var(--deep); }
+  .t-card:hover::after { transform: scaleX(1); }
+  .t-icon { font-size: 1.8rem; margin-bottom: 1rem; line-height: 1; }
+  .t-card h3 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.4rem; font-weight: 400; color: var(--white); margin-bottom: 0.5rem;
+  }
+  .t-price {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.8rem; color: var(--gold-lt); font-weight: 300;
+    margin-bottom: 0.8rem; line-height: 1;
+  }
+  .t-price span { font-size: 0.85rem; color: var(--muted); font-family: 'DM Sans', sans-serif; font-weight: 300; }
+  .t-card > p { font-size: 0.87rem; color: var(--muted); line-height: 1.75; }
+  .t-card ul {
+    list-style: none; margin-top: 1rem; display: flex; flex-direction: column; gap: 0.45rem;
+  }
+  .t-card ul li {
+    font-size: 0.84rem; color: var(--muted); padding-left: 1.1rem; position: relative;
+  }
+  .t-card ul li::before { content: '–'; position: absolute; left: 0; color: var(--gold); }
+  .t-cta { margin-top: 2rem; display: inline-block; }
+
+  /* ── SCHOOLS ── */
+  .schools { background: var(--deep); position: relative; overflow: hidden; }
+  .schools::before {
+    content: ''; position: absolute; top: -150px; right: -150px;
+    width: 500px; height: 500px; border-radius: 50%;
+    background: radial-gradient(circle, rgba(201,168,76,0.06) 0%, transparent 70%);
+    pointer-events: none;
+  }
+  .schools-grid {
+    display: grid; grid-template-columns: 1.1fr 1fr; gap: 5rem; align-items: start;
+    position: relative;
+  }
+  .schools-text p {
+    color: var(--muted); line-height: 1.8; margin-top: 1.2rem; font-size: 0.95rem; font-weight: 300;
+  }
+  .schools-text .btn-gold { margin-top: 2rem; display: inline-block; }
+  .schools-feats { display: flex; flex-direction: column; }
+  .feat {
+    display: flex; gap: 1rem; align-items: flex-start;
+    padding: 1.2rem 0; border-bottom: 1px solid var(--border);
+  }
+  .feat:first-child { padding-top: 0; }
+  .feat:last-child { border-bottom: none; }
+  .feat-icon { font-size: 1rem; flex-shrink: 0; margin-top: 0.1rem; }
+  .feat h4 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.05rem; color: var(--white); font-weight: 400; margin-bottom: 0.2rem;
+  }
+  .feat p { font-size: 0.82rem; color: var(--muted); line-height: 1.6; }
+
+  /* ── ABOUT ── */
+  .about { background: var(--bg); }
+  .about-grid {
+    display: grid; grid-template-columns: 1fr 1fr; gap: 5rem; align-items: start;
+  }
+  .about-text p {
+    color: var(--muted); line-height: 1.85; margin-top: 1.2rem;
+    font-size: 0.95rem; font-weight: 300;
+  }
+  .about-people { display: flex; flex-direction: column; gap: 1px; }
+  .person {
+    background: var(--mid); padding: 2rem 2.2rem;
+    border-left: 2px solid var(--gold); transition: background 0.3s;
+  }
+  .person:hover { background: var(--surface); }
+  .person-name {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.3rem; color: var(--white); font-weight: 400; margin-bottom: 0.2rem;
+  }
+  .person-role {
+    font-size: 0.67rem; letter-spacing: 0.18em; text-transform: uppercase;
+    color: var(--gold); margin-bottom: 0.7rem;
+  }
+  .person p { font-size: 0.84rem; color: var(--muted); line-height: 1.65; }
+
+  /* ── CONTACT ── */
+  .contact { background: var(--deep); }
+  .contact-inner { max-width: 680px; }
+  .contact-details {
+    margin-top: 2.5rem; border: 1px solid var(--border);
+  }
+  .contact-row {
+    display: flex; align-items: center; gap: 1.2rem;
+    padding: 1.4rem 1.8rem; border-bottom: 1px solid var(--border);
+    transition: background 0.3s;
+  }
+  .contact-row:last-child { border-bottom: none; }
+  .contact-row:hover { background: var(--mid); }
+  .c-icon { font-size: 1.1rem; flex-shrink: 0; }
+  .c-label {
+    font-size: 0.64rem; letter-spacing: 0.18em; text-transform: uppercase;
+    color: var(--gold); margin-bottom: 0.2rem;
+  }
+  .contact-row a, .contact-row span {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.15rem; color: var(--white); text-decoration: none; transition: color 0.3s;
+  }
+  .contact-row a:hover { color: var(--gold-lt); }
+  .contact-note {
+    margin-top: 1.5rem; font-size: 0.83rem; color: var(--muted); line-height: 1.7;
+  }
+
+  /* ── FOOTER ── */
+  footer {
+    background: #060d09; padding: 2.2rem 4rem;
+    border-top: 1px solid var(--border);
+  }
+  .footer-top {
+    display: flex; justify-content: space-between; align-items: center;
+    flex-wrap: wrap; gap: 1rem; margin-bottom: 1.2rem;
+    padding-bottom: 1.2rem; border-bottom: 1px solid var(--border);
+  }
+  .f-logo {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.15rem; color: var(--gold-lt); letter-spacing: 0.1em;
+  }
+  footer p { font-size: 0.75rem; color: var(--muted); }
+  .footer-links {
+    display: flex; gap: 2rem; flex-wrap: wrap;
+  }
+  .footer-links a {
+    font-size: 0.72rem; color: var(--muted); text-decoration: none;
+    letter-spacing: 0.1em; text-transform: uppercase;
+    transition: color 0.3s; border-bottom: 1px solid transparent;
+  }
+  .footer-links a:hover { color: var(--gold-lt); border-bottom-color: var(--gold-lt); }
+  .footer-bottom {
+    display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 0.5rem;
+  }
+
+  /* ── ANIM ── */
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(22px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+
+  /* ── RESPONSIVE ── */
+  @media (max-width: 960px) {
+    nav { padding: 1.1rem 1.8rem; }
+    nav ul { display: none; }
+    section { padding: 4.5rem 1.8rem; }
+    .hero { padding: 0 1.8rem; }
+    .res-grid { grid-template-columns: 1fr 1fr; }
+    .tutoring-grid { grid-template-columns: 1fr; }
+    .about-grid, .schools-grid { grid-template-columns: 1fr; gap: 2.5rem; }
+    footer { padding: 2rem 1.8rem; }
+  }
+  @media (max-width: 540px) {
+    .res-grid { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a href="#top" class="logo">Mentoring CPH</a>
+  <ul>
+    <li><a href="#resources">Resources</a></li>
+    <li><a href="#tutoring">Tutoring</a></li>
+    <li><a href="#schools">For Schools</a></li>
+    <li><a href="#about">About</a></li>
+    <li><a href="#contact" class="nav-cta">Contact</a></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<section class="hero" id="top">
+  <div class="hero-bg"></div>
+  <div class="hero-grid"></div>
+  <div class="hero-content">
+    <div class="eyebrow">IB Mathematics · AI SL</div>
+    <h1>Pass your IB Math.<br><em>With confidence.</em></h1>
+    <p class="hero-sub">Study resources and expert tutoring built specifically for IB Math — by experienced IB educators who know the syllabus and exactly how it's examined.</p>
+    <div class="btn-row">
+      <a href="#resources" class="btn-gold">Browse Resources</a>
+      <a href="#tutoring" class="btn-outline">Tutoring</a>
+    </div>
+  </div>
+</section>
+
+<!-- RESOURCES -->
+<section class="resources" id="resources">
+  <div class="inner">
+    <div class="section-label">Self-Study Resources</div>
+    <h2>IB Math AI SL — <em>everything you need</em></h2>
+    <p class="section-body" style="max-width:540px; margin-top:0.4rem;">All materials are built specifically for IB Math AI SL, mapped to the current syllabus, and structured around the exam. Start for free, or go all-in with the complete study set.</p>
+    <div class="res-grid">
+
+      <!-- Free Sheet -->
+      <div class="res-card">
+        <div class="res-icon">📄</div>
+        <div class="res-tag">Free Download</div>
+        <h3>Revision Summary Sheet</h3>
+        <p>A concise summary of all key formulas, concepts, and definitions across the AI SL syllabus. Perfect for last-minute revision.</p>
+        <div class="res-price free">Free</div>
+        <div class="res-price-note">No signup required</div>
+        <a href="#REPLACE_WITH_SHEET_LINK" class="res-btn">Download Free</a>
+      </div>
+
+      <!-- Video Course -->
+      <div class="res-card">
+        <div class="res-icon">🎬</div>
+        <div class="res-tag">Video Course</div>
+        <h3>Revision Video Course</h3>
+        <p>Topic-by-topic video lessons covering the full AI SL syllabus. Clear explanations, worked examples, and exam-focused walkthroughs.</p>
+        <div class="res-price">€39</div>
+        <div class="res-price-note">One-time purchase · Lifetime access</div>
+        <a href="#REPLACE_WITH_COURSE_LINK" class="res-btn">Buy Course</a>
+      </div>
+
+      <!-- Exam Questions -->
+      <div class="res-card">
+        <div class="res-icon">✏️</div>
+        <div class="res-tag">Practice Questions</div>
+        <h3>Exam-Style Questions</h3>
+        <p>A full bank of exam-style questions covering all topics, with mark-scheme style worked solutions so you can check your work properly.</p>
+        <div class="res-price">€39</div>
+        <div class="res-price-note">All topics included</div>
+        <a href="#REPLACE_WITH_QUESTIONS_LINK" class="res-btn">Buy Questions</a>
+      </div>
+
+      <!-- Complete Bundle -->
+      <div class="res-card">
+        <div class="best-value-ribbon">Best Value</div>
+        <div class="res-icon">📦</div>
+        <div class="res-tag">Bundle</div>
+        <h3>Complete Study Set</h3>
+        <p>Everything in one package — the video course, exam-style questions, and summary sheet. The most complete way to prepare for your AI SL exam.</p>
+        <div class="res-price">€69</div>
+        <div class="res-price-note">Save €9 vs. buying separately</div>
+        <div class="guarantee-badge">
+          <span class="g-icon">🛡️</span>
+          <p>Passing guarantee included — if you don't pass your IB Math AI SL exam, we refund your purchase. <a href="#REPLACE_WITH_GUARANTEE_LINK">Learn more</a></p>
+        </div>
+        <a href="#REPLACE_WITH_BUNDLE_LINK" class="res-btn primary" style="margin-top:1.2rem;">Buy Bundle</a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- TUTORING -->
+<section class="tutoring" id="tutoring">
+  <div class="inner">
+    <div class="section-label">Tutoring</div>
+    <h2>IB Math tutoring, <em>your way</em></h2>
+    <p class="section-body" style="max-width:560px;">Whether you're on Analysis & Approaches or Applications & Interpretation, SL or HL — we offer flexible tutoring that fits your schedule and budget.</p>
+    <div class="tutoring-grid">
+
+      <div class="t-card">
+        <div class="t-icon">🎯</div>
+        <h3>Private 1-on-1 Tutoring</h3>
+        <div class="t-price">€50 <span>/ hour</span></div>
+        <p>Personalised sessions focused entirely on you — your weak spots, your timeline, your questions. Covers all IB Math courses: AI SL, AI HL, AA SL, and AA HL, including IA support and exam technique.</p>
+        <ul>
+          <li>All IB Math courses (AI & AA, SL & HL)</li>
+          <li>Internal Assessment (IA) guidance</li>
+          <li>Exam revision & past paper practice</li>
+          <li>Online or in person</li>
+        </ul>
+        <a href="#REPLACE_WITH_BOOKING_LINK" class="btn-gold t-cta">Book a Session</a>
+      </div>
+
+      <div class="t-card">
+        <div class="t-icon">👥</div>
+        <h3>Group Study Sessions</h3>
+        <div class="t-price">€20 <span>/ hour per student</span></div>
+        <p>Study together with other IB Math students in longer, structured sessions of 3–6 hours. A great way to cover a lot of ground before exams at a fraction of the 1-on-1 price.</p>
+        <ul>
+          <li>3–6 hour sessions</li>
+          <li>Small groups for real interaction</li>
+          <li>Structured around syllabus topics or past papers</li>
+          <li>Ideal for exam season preparation</li>
+        </ul>
+        <a href="#REPLACE_WITH_BOOKING_LINK" class="btn-gold t-cta">Join a Group Session</a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- SCHOOLS -->
+<section class="schools" id="schools">
+  <div class="inner">
+    <div class="schools-grid">
+      <div class="schools-text">
+        <div class="section-label">For Schools &amp; Teachers</div>
+        <h2>School licences for<br><em>IB Math AI SL</em></h2>
+        <p>Give your whole cohort access to our full resource library under a single school licence. Integrate the materials alongside your teaching, or let students use them independently for self-study.</p>
+        <p>Licences are available per academic year with transparent pricing that scales with cohort size. Reach out and we'll arrange a short consultation.</p>
+        <a href="#REPLACE_WITH_SCHOOL_INQUIRY_LINK" class="btn-gold">Enquire About a Licence</a>
+      </div>
+      <div class="schools-feats">
+        <div class="feat">
+          <div class="feat-icon">📚</div>
+          <div>
+            <h4>Full Resource Library Access</h4>
+            <p>All students get the complete AI SL resource library for the licence period.</p>
+          </div>
+        </div>
+        <div class="feat">
+          <div class="feat-icon">🎯</div>
+          <div>
+            <h4>Syllabus-Aligned Content</h4>
+            <p>Every resource maps directly to the current IB Math AI SL syllabus.</p>
+          </div>
+        </div>
+        <div class="feat">
+          <div class="feat-icon">📊</div>
+          <div>
+            <h4>Transparent Pricing</h4>
+            <p>Per-year licences with pricing based on cohort size. No hidden fees.</p>
+          </div>
+        </div>
+        <div class="feat">
+          <div class="feat-icon">💬</div>
+          <div>
+            <h4>Onboarding Included</h4>
+            <p>A short call to help you integrate the resources into your programme.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section class="about" id="about">
+  <div class="inner">
+    <div class="about-grid">
+      <div class="about-text">
+        <div class="section-label">About Us</div>
+        <h2>Built by students,<br><em>for students</em></h2>
+        <p>Mentoring CPH was founded by Javier and Frederik, two experienced IB tutors who have been through the Diploma Programme themselves and know exactly what it demands.</p>
+        <p>We started Mentoring CPH because we saw a gap: most IB revision materials are either too generic, too expensive, or don't reflect how the exams are actually marked. We wanted to create something better — resources and tutoring grounded in real IB experience.</p>
+        <p>Our focus is IB Math. We know the syllabus inside out, we understand the mark schemes, and we know the specific areas where students tend to lose marks. That's what we teach.</p>
+      </div>
+      <div class="about-people">
+        <div class="person">
+          <div class="person-name">Javier</div>
+          <div class="person-role">Co-founder · IB Tutor</div>
+          <p>Experienced IB Math tutor with a strong track record helping students across AI and AA at both SL and HL. Specialises in making complex topics accessible and building student confidence ahead of exams.</p>
+        </div>
+        <div class="person">
+          <div class="person-name">Frederik</div>
+          <div class="person-role">Co-founder · IB Tutor</div>
+          <p>IB graduate and experienced tutor with deep knowledge of the AI SL curriculum. Leads the development of our study resources and brings a structured, exam-focused approach to every session.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="contact" id="contact">
+  <div class="inner">
+    <div class="contact-inner">
+      <div class="section-label">Contact</div>
+      <h2>Get in <em>touch</em></h2>
+      <p class="section-body">Questions about tutoring, resources, or a school licence? Reach out and we'll get back to you quickly.</p>
+      <div class="contact-details">
+        <div class="contact-row">
+          <div class="c-icon">✉</div>
+          <div>
+            <div class="c-label">Email</div>
+            <a href="mailto:info@mentoringcph.com">info@mentoringcph.com</a>
+          </div>
+        </div>
+        <div class="contact-row">
+          <div class="c-icon">📞</div>
+          <div>
+            <div class="c-label">Phone</div>
+            <a href="tel:+4522228314">+45 2222 8314</a>
+          </div>
+        </div>
+      </div>
+      <p class="contact-note">We typically respond within 24 hours. For school licence enquiries, please mention your school name and approximate cohort size.</p>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-top">
+    <div class="f-logo">Mentoring CPH</div>
+    <div class="footer-links">
+      <a href="#REPLACE_WITH_GUARANTEE_LINK">Passing Guarantee</a>
+      <a href="#REPLACE_WITH_TC_LINK">Terms &amp; Conditions</a>
+      <a href="mailto:info@mentoringcph.com">info@mentoringcph.com</a>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>© 2025 Mentoring CPH. All rights reserved.</p>
+    <p>IB Math Resources &amp; Tutoring</p>
+  </div>
+</footer>
+
+</body>
 </html>
