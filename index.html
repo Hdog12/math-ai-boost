@@ -68,7 +68,7 @@
   .hero-bg {
     position: absolute; inset: 0;
     background:
-      radial-gradient(ellipse 70% 60% at 50% 40%, rgba(201,168,76,0.06) 0%, transparent 70%),
+      radial-gradient(ellipse 70% 60% at 65% 50%, rgba(201,168,76,0.06) 0%, transparent 70%),
       linear-gradient(150deg, #0e1a14 0%, #111f18 60%, #0a1510 100%);
   }
   .hero-grid {
@@ -78,69 +78,9 @@
       linear-gradient(90deg, rgba(201,168,76,0.03) 1px, transparent 1px);
     background-size: 64px 64px;
   }
-  .hero-inner {
-    position: relative; width: 100%;
-    max-width: 1060px; margin: 0 auto;
-    display: flex; flex-direction: column;
-    align-items: center; text-align: center;
-    gap: 4rem;
-  }
   .hero-content {
-    max-width: 700px;
+    position: relative; max-width: 640px;
     animation: fadeUp 0.9s ease both;
-  }
-  .hero-content .hero-sub { max-width: 560px; margin-left: auto; margin-right: auto; }
-  .hero-content .btn-row { justify-content: center; }
-  .hero-content .eyebrow { justify-content: center; }
-  .hero-content .eyebrow::before { display: none; }
-
-  /* ── HERO STAT STRIP ── */
-  .hero-stats-strip {
-    width: 100%;
-    display: grid; grid-template-columns: repeat(4, 1fr);
-    gap: 1px; background: var(--border);
-    border: 1px solid var(--border);
-    border-radius: 3px; overflow: hidden;
-    animation: fadeUp 0.9s 0.25s ease both;
-  }
-  .hero-stat-card {
-    background: var(--deep);
-    padding: 2rem 1.6rem;
-    display: flex; flex-direction: column; align-items: center; text-align: center;
-    position: relative; overflow: hidden;
-    transition: background 0.3s;
-  }
-  .hero-stat-card::after {
-    content: ''; position: absolute; bottom: 0; left: 0; right: 0; height: 2px;
-    background: linear-gradient(90deg, transparent, var(--gold), transparent);
-    transform: scaleX(0); transform-origin: center;
-    transition: transform 0.5s ease;
-  }
-  .hero-stat-card:hover { background: var(--mid); }
-  .hero-stat-card:hover::after { transform: scaleX(1); }
-  .hero-stat-number {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: clamp(2.6rem, 3.5vw, 3.8rem);
-    font-weight: 300; color: var(--gold-lt);
-    line-height: 1; margin-bottom: 0.3rem;
-    letter-spacing: -0.01em;
-  }
-  .hero-stat-number sup {
-    font-size: 0.42em; vertical-align: super;
-    color: var(--gold); font-weight: 300;
-  }
-  .hero-stat-divider {
-    width: 24px; height: 1px; background: var(--gold);
-    opacity: 0.5; margin: 0.85rem auto;
-  }
-  .hero-stat-label {
-    font-size: 0.8rem; color: var(--white);
-    line-height: 1.5; font-weight: 400;
-    letter-spacing: 0.01em;
-  }
-  .hero-stat-sub {
-    font-size: 0.72rem; color: var(--muted);
-    margin-top: 0.4rem; line-height: 1.5; font-weight: 300;
   }
   .eyebrow {
     display: flex; align-items: center; gap: 0.8rem;
@@ -350,87 +290,11 @@
 
   @keyframes fadeUp { from { opacity: 0; transform: translateY(22px); } to { opacity: 1; transform: translateY(0); } }
 
-  /* ── STATS ── */
-  .stats { background: var(--bg); position: relative; overflow: hidden; padding: 5rem 4rem; }
-  .stats::before {
-    content: ''; position: absolute; inset: 0;
-    background:
-      radial-gradient(ellipse 55% 70% at 15% 50%, rgba(201,168,76,0.05) 0%, transparent 65%),
-      radial-gradient(ellipse 40% 60% at 85% 50%, rgba(201,168,76,0.03) 0%, transparent 65%);
-    pointer-events: none;
-  }
-  .stats-header { text-align: center; margin-bottom: 3.5rem; }
-  .stats-header .section-label { justify-content: center; display: flex; }
-  .stats-header h2 { margin-bottom: 0.6rem; }
-  .stats-header p { color: var(--muted); font-size: 0.88rem; font-weight: 300; }
-  .stats-grid {
-    display: grid; grid-template-columns: repeat(4, 1fr);
-    gap: 1px; background: var(--border);
-    border: 1px solid var(--border);
-  }
-  .stat-card {
-    background: var(--deep);
-    padding: 2.8rem 2rem;
-    display: flex; flex-direction: column; align-items: center; text-align: center;
-    position: relative; overflow: hidden;
-    transition: background 0.3s;
-  }
-  .stat-card::after {
-    content: ''; position: absolute; bottom: 0; left: 0; right: 0; height: 2px;
-    background: linear-gradient(90deg, transparent, var(--gold), transparent);
-    transform: scaleX(0); transform-origin: center;
-    transition: transform 0.5s ease;
-  }
-  .stat-card:hover { background: var(--mid); }
-  .stat-card:hover::after { transform: scaleX(1); }
-  .stat-number {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: clamp(2.8rem, 4vw, 4rem);
-    font-weight: 300; color: var(--gold-lt);
-    line-height: 1; margin-bottom: 0.3rem;
-    letter-spacing: -0.01em;
-  }
-  .stat-number sup {
-    font-size: 0.45em; vertical-align: super;
-    color: var(--gold); font-weight: 300;
-  }
-  .stat-divider {
-    width: 24px; height: 1px; background: var(--gold);
-    opacity: 0.5; margin: 0.9rem auto;
-  }
-  .stat-label {
-    font-size: 0.78rem; color: var(--white);
-    line-height: 1.5; font-weight: 400;
-    letter-spacing: 0.01em;
-  }
-  .stat-sub {
-    font-size: 0.71rem; color: var(--muted);
-    margin-top: 0.4rem; line-height: 1.5; font-weight: 300;
-  }
-  .stats-footnote {
-    text-align: center; margin-top: 2rem;
-    font-size: 0.72rem; color: var(--muted); font-weight: 300;
-    opacity: 0.7;
-  }
-
-  /* count-up animation */
-  .stat-number[data-target] { transition: none; }
-
-  @media (max-width: 960px) {
-    .stats-grid { grid-template-columns: 1fr 1fr; }
-    .stats { padding: 4.5rem 1.8rem; }
-  }
-  @media (max-width: 540px) {
-    .stats-grid { grid-template-columns: 1fr; }
-  }
-
   @media (max-width: 960px) {
     nav { padding: 1.1rem 1.8rem; }
     nav ul { display: none; }
     section { padding: 4.5rem 1.8rem; }
     .hero { padding: 0 1.8rem; }
-    .hero-inner { padding: 6rem 0 3rem; gap: 2.5rem; }
-    .hero-stats-strip { grid-template-columns: 1fr 1fr; }
     .res-grid { grid-template-columns: 1fr 1fr; }
     .tutoring-grid { grid-template-columns: 1fr; }
     .about-grid, .schools-grid { grid-template-columns: 1fr; gap: 2.5rem; }
@@ -449,17 +313,17 @@
 <script>
   const LINKS = {
     // Resources
-    sheet:     "https://docs.google.com/spreadsheets/d/1wZtSm-kl-2a1FueY7DDkYhnRynKANyCAWfzAn-LIPYc/template/preview",   // Free revision summary sheet
+    sheet:     "https://docs.google.com/spreadsheets/d/1Z6IUP6xAYKr59qOOxNqJCna44yMcdc_RnVV93WTXF4M/template/preview",   // Free revision summary sheet
     course:    "https://buy.stripe.com/7sY8wP4OW146gBK4gm9sk0j",   // Video course (€39)
     questions: "https://buy.stripe.com/eVq6oHa9gdQS71a0069sk0h",   // Exam-style questions (€39)
     bundle:    "https://buy.stripe.com/5kQcN52GOfZ0fxG7sy9sk0i",   // Complete study set (€69)
 
     // Tutoring
-    private:   "https://tally.so/r/xXp0b9",   // Book 1-on-1 session (€60/h)
-    group:     "https://tally.so/r/VL09e6",   // Join group session (€20/h)
+    private:   "https://YOUR-LINK-HERE",   // Book 1-on-1 session (€50/h)
+    group:     "https://YOUR-LINK-HERE",   // Join group session (€20/h)
 
     // Schools
-    schools:   "https://tally.so/r/9qW6eE",   // School licence enquiry
+    schools:   "https://YOUR-LINK-HERE",   // School licence enquiry
 
     // Legal
     guarantee: "https://drive.google.com/file/d/1UXKHCBEadbgW2dtMV30e3PJQk445nFuQ/view?usp=sharing",   // Passing guarantee page
@@ -491,42 +355,13 @@
 <section class="hero" id="top">
   <div class="hero-bg"></div>
   <div class="hero-grid"></div>
-  <div class="hero-inner">
-    <div class="hero-content">
-      <div class="eyebrow">IB Mathematics · AI SL</div>
-      <h1>Ace IB Math.<br><em>With confidence.</em></h1>
-      <p class="hero-sub">Study resources and expert tutoring built specifically for IB Math — by experienced IB educators who know the syllabus and exactly how it's examined.</p>
-      <div class="btn-row">
-        <a href="#resources" class="btn-gold">Browse Resources</a>
-        <a href="#tutoring" class="btn-outline">Tutoring</a>
-      </div>
-    </div>
-
-    <div class="hero-stats-strip">
-      <div class="hero-stat-card">
-        <div class="hero-stat-number"><span class="count-up" data-target="2.6" data-decimals="1">2.6</span></div>
-        <div class="hero-stat-divider"></div>
-        <div class="hero-stat-label">Average IB grade point increase</div>
-        <div class="hero-stat-sub">Across students who completed our resources</div>
-      </div>
-      <div class="hero-stat-card">
-        <div class="hero-stat-number"><span class="count-up" data-target="4.8" data-decimals="1">4.8</span><sup>/ 5</sup></div>
-        <div class="hero-stat-divider"></div>
-        <div class="hero-stat-label">Average quality rating</div>
-        <div class="hero-stat-sub">Rated by students</div>
-      </div>
-      <div class="hero-stat-card">
-        <div class="hero-stat-number">2×</div>
-        <div class="hero-stat-divider"></div>
-        <div class="hero-stat-label">Average confidence boost</div>
-        <div class="hero-stat-sub">Students rated confidence nearly twice as high after using our resources</div>
-      </div>
-      <div class="hero-stat-card">
-        <div class="hero-stat-number"><span class="count-up" data-target="100" data-decimals="0">100</span><sup>%</sup></div>
-        <div class="hero-stat-divider"></div>
-        <div class="hero-stat-label">Student satisfaction rate</div>
-        <div class="hero-stat-sub">With our resources overall</div>
-      </div>
+  <div class="hero-content">
+    <div class="eyebrow">IB Mathematics · AI SL</div>
+    <h1>Pass your IB Math.<br><em>With confidence.</em></h1>
+    <p class="hero-sub">Study resources and expert tutoring built specifically for IB Math — by experienced IB educators who know the syllabus and exactly how it's examined.</p>
+    <div class="btn-row">
+      <a href="#resources" class="btn-gold">Browse Resources</a>
+      <a href="#tutoring" class="btn-outline">Tutoring</a>
     </div>
   </div>
 </section>
@@ -534,7 +369,7 @@
 <!-- RESOURCES -->
 <section class="resources" id="resources">
   <div class="inner">
-    <div class="section-label">Study Resources</div>
+    <div class="section-label">Self-Study Resources</div>
     <h2>IB Math AI SL — <em>everything you need</em></h2>
     <p class="section-body" style="max-width:540px; margin-top:0.4rem;">All materials are built specifically for IB Math AI SL, mapped to the current syllabus, and structured around the exam. Start for free, or go all-in with the complete study set.</p>
     <div class="res-grid">
@@ -542,7 +377,7 @@
       <div class="res-card">
         <div class="res-icon">📄</div>
         <div class="res-tag">Free Download</div>
-        <h3>Revision Sheet</h3>
+        <h3>Revision Summary Sheet</h3>
         <p>A concise summary of all key formulas, concepts, and definitions across the AI SL syllabus. Perfect for last-minute revision.</p>
         <div class="res-price free">Free</div>
         <div class="res-price-note">No signup required</div>
@@ -563,9 +398,9 @@
         <div class="res-icon">✏️</div>
         <div class="res-tag">Practice Questions</div>
         <h3>Exam-Style Questions</h3>
-        <p>A full bank of mock exams and topic-wise exam-style questions, with mark-scheme style worked solutions so you can check your work properly.</p>
+        <p>A full bank of exam-style questions covering all topics, with mark-scheme style worked solutions so you can check your work properly.</p>
         <div class="res-price">€39</div>
-        <div class="res-price-note">One-time purchase · Lifetime access</div>
+        <div class="res-price-note">All topics included</div>
         <a data-link="questions" href="#" class="res-btn">Buy Questions</a>
       </div>
 
@@ -574,8 +409,9 @@
         <div class="res-icon">📦</div>
         <div class="res-tag">Bundle</div>
         <h3>Complete Study Set</h3>
-        <p>Everything in one package: the video course, exam-style questions, and summary sheet. The most complete way to prepare for your AI SL exam.</p>
+        <p>Everything in one package — the video course, exam-style questions, and summary sheet. The most complete way to prepare for your AI SL exam.</p>
         <div class="res-price">€69</div>
+        <div class="res-price-note">Save €9 vs. buying separately</div>
         <div class="guarantee-badge">
           <span class="g-icon">🛡️</span>
           <p>Passing guarantee included — if you don't pass your IB Math AI SL exam, we refund your purchase. <a data-link="guarantee" href="#">Learn more</a></p>
@@ -592,19 +428,19 @@
   <div class="inner">
     <div class="section-label">Tutoring</div>
     <h2>IB Math tutoring, <em>your way</em></h2>
-    <p class="section-body" style="max-width:560px;">Whether you're taking Math AA or AI, SL or HL — we offer flexible tutoring that fits your schedule and budget.</p>
+    <p class="section-body" style="max-width:560px;">Whether you're on Analysis & Approaches or Applications & Interpretation, SL or HL — we offer flexible tutoring that fits your schedule and budget.</p>
     <div class="tutoring-grid">
 
       <div class="t-card">
         <div class="t-icon">🎯</div>
         <h3>Private 1-on-1 Tutoring</h3>
-        <div class="t-price">€75 <span>/ hour</span></div>
+        <div class="t-price">€50 <span>/ hour</span></div>
         <p>Personalised sessions focused entirely on you — your weak spots, your timeline, your questions. Covers all IB Math courses: AI SL, AI HL, AA SL, and AA HL, including IA support and exam technique.</p>
         <ul>
           <li>All IB Math courses (AI & AA, SL & HL)</li>
           <li>Internal Assessment (IA) guidance</li>
           <li>Exam revision & past paper practice</li>
-          <li>Online & Flexible</li>
+          <li>Online or in person</li>
         </ul>
         <a data-link="private" href="#" class="btn-gold t-cta">Book a Session</a>
       </div>
@@ -612,7 +448,7 @@
       <div class="t-card">
         <div class="t-icon">👥</div>
         <h3>Group Study Sessions</h3>
-        <div class="t-price">€20 <span>/ hour </span></div>
+        <div class="t-price">€20 <span>/ hour per student</span></div>
         <p>Study together with other IB Math students in longer, structured sessions of 3–6 hours. A great way to cover a lot of ground before exams at a fraction of the 1-on-1 price.</p>
         <ul>
           <li>3–6 hour sessions</li>
@@ -687,7 +523,7 @@
           <div class="c-icon">✉</div>
           <div>
             <div class="c-label">Email</div>
-            <a href="/cdn-cgi/l/email-protection#b6dfd8d0d9f6dbd3d8c2d9c4dfd8d1d5c6de98d5d9db"><span class="__cf_email__" data-cfemail="2e474048416e434b405a415c4740494d5e46004d4143">[email&#160;protected]</span></a>
+            <a href="mailto:info@mentoringcph.com">info@mentoringcph.com</a>
           </div>
         </div>
         <div class="contact-row">
@@ -710,30 +546,14 @@
     <div class="footer-links">
       <a data-link="guarantee" href="#">Passing Guarantee</a>
       <a data-link="terms" href="#">Terms &amp; Conditions</a>
-      <a href="/cdn-cgi/l/email-protection#c8a1a6aea788a5ada6bca7baa1a6afabb8a0e6aba7a5"><span class="__cf_email__" d
-<script>
-  // Count-up animation triggered when stats section enters viewport
-  const counters = document.querySelectorAll('.count-up');
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (!entry.isIntersecting) return;
-      const el = entry.target;
-      const target = parseFloat(el.dataset.target);
-      const decimals = parseInt(el.dataset.decimals) || 0;
-      const duration = 1600;
-      const start = performance.now();
-      function step(now) {
-        const progress = Math.min((now - start) / duration, 1);
-        const eased = 1 - Math.pow(1 - progress, 3);
-        el.textContent = (eased * target).toFixed(decimals);
-        if (progress < 1) requestAnimationFrame(step);
-        else el.textContent = target.toFixed(decimals);
-      }
-      requestAnimationFrame(step);
-      observer.unobserve(el);
-    });
-  }, { threshold: 0.3 });
-  counters.forEach(c => observer.observe(c));
-</script>
+      <a href="mailto:info@mentoringcph.com">info@mentoringcph.com</a>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>© 2025 Mentoring CPH. All rights reserved.</p>
+    <p>IB Math Resources &amp; Tutoring</p>
+  </div>
+</footer>
+
 </body>
 </html>
