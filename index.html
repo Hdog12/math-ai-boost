@@ -189,6 +189,105 @@
     color: var(--muted); font-size: 0.95rem; line-height: 1.8; font-weight: 300;
   }
 
+  /* ── DEMO BANNER ── */
+  .demo-banner {
+    background: var(--bg);
+    border-top: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+    padding: 0;
+  }
+  .demo-inner {
+    max-width: 1060px; margin: 0 auto;
+    display: grid; grid-template-columns: 1fr 1fr;
+    gap: 1px; background: var(--border);
+  }
+  .demo-left {
+    background: var(--mid);
+    padding: 3.5rem 3.8rem;
+    position: relative; overflow: hidden;
+  }
+  .demo-left::before {
+    content: '';
+    position: absolute; top: -80px; left: -80px;
+    width: 300px; height: 300px; border-radius: 50%;
+    background: radial-gradient(circle, rgba(201,168,76,0.08) 0%, transparent 65%);
+    pointer-events: none;
+  }
+  .demo-left::after {
+    content: '';
+    position: absolute; bottom: 0; left: 0; right: 0; height: 2px;
+    background: linear-gradient(90deg, var(--gold), transparent);
+  }
+  .demo-eyebrow {
+    display: inline-flex; align-items: center; gap: 0.5rem;
+    font-size: 0.62rem; letter-spacing: 0.22em; text-transform: uppercase;
+    color: var(--gold);
+    background: rgba(201,168,76,0.08);
+    border: 1px solid rgba(201,168,76,0.2);
+    padding: 0.3rem 0.75rem; border-radius: 1px;
+    margin-bottom: 1.4rem;
+  }
+  .demo-left h2 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(1.8rem, 2.8vw, 2.6rem);
+    font-weight: 300; line-height: 1.15;
+    color: var(--white); margin-bottom: 1rem;
+  }
+  .demo-left h2 em { font-style: italic; color: var(--gold-lt); }
+  .demo-left p {
+    font-size: 0.92rem; color: var(--muted); line-height: 1.8;
+    font-weight: 300; margin-bottom: 2rem; max-width: 420px;
+  }
+  .demo-cta-row { display: flex; align-items: center; gap: 1.2rem; flex-wrap: wrap; }
+  .btn-demo {
+    display: inline-block; padding: 0.9rem 2.2rem;
+    background: var(--gold); color: var(--bg);
+    font-size: 0.78rem; letter-spacing: 0.12em; text-transform: uppercase;
+    text-decoration: none; font-weight: 500; border-radius: 2px;
+    transition: background 0.3s, transform 0.2s;
+    white-space: nowrap;
+  }
+  .btn-demo:hover { background: var(--gold-lt); transform: translateY(-2px); }
+  .demo-no-account {
+    font-size: 0.73rem; color: var(--muted); letter-spacing: 0.04em;
+  }
+  .demo-right {
+    background: var(--deep);
+    padding: 3.5rem 3.8rem;
+    display: flex; flex-direction: column; justify-content: center;
+  }
+  .demo-includes-label {
+    font-size: 0.62rem; letter-spacing: 0.22em; text-transform: uppercase;
+    color: var(--gold); margin-bottom: 1.4rem;
+  }
+  .demo-items { display: flex; flex-direction: column; gap: 0; }
+  .demo-item {
+    display: flex; align-items: flex-start; gap: 1rem;
+    padding: 1.1rem 0; border-bottom: 1px solid var(--border);
+    transition: background 0.2s;
+  }
+  .demo-item:last-child { border-bottom: none; }
+  .demo-item-icon {
+    width: 36px; height: 36px; flex-shrink: 0;
+    border: 1px solid var(--border);
+    display: flex; align-items: center; justify-content: center;
+    font-size: 1rem; background: var(--mid); border-radius: 2px;
+  }
+  .demo-item-text h4 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.05rem; font-weight: 400; color: var(--white);
+    margin-bottom: 0.2rem; line-height: 1.3;
+  }
+  .demo-item-text p {
+    font-size: 0.78rem; color: var(--muted); line-height: 1.55;
+  }
+  .demo-disclaimer {
+    margin-top: 1.8rem;
+    font-size: 0.72rem; color: var(--muted); line-height: 1.6;
+    padding-top: 1.2rem; border-top: 1px solid var(--border);
+    opacity: 0.75;
+  }
+
   /* ── RESOURCES ── */
   .resources { background: var(--deep); }
   .res-grid {
@@ -356,6 +455,8 @@
     .tutoring-grid { grid-template-columns: 1fr; }
     .about-grid, .schools-grid { grid-template-columns: 1fr; gap: 2.5rem; }
     footer { padding: 2rem 1.8rem; }
+    .demo-inner { grid-template-columns: 1fr; }
+    .demo-left, .demo-right { padding: 2.5rem 1.8rem; }
   }
   @media (max-width: 540px) {
     .res-grid { grid-template-columns: 1fr; }
@@ -371,6 +472,7 @@
 <script>
   const LINKS = {
     // Resources
+    demo:      "https://docs.google.com/forms/d/e/1FAIpQLSeHhmXH7qOx8t5YIBYOXDUfzuO0wI-c5FEOBDPb2OY0Anfz2g/viewform?usp=sharing&ouid=107915751419488929739",                                                                               // Free demo form
     sheet:     "https://docs.google.com/spreadsheets/d/1wZtSm-kl-2a1FueY7DDkYhnRynKANyCAWfzAn-LIPYc/template/preview",   // Free revision summary sheet
     course:    "https://buy.stripe.com/7sY8wP4OW146gBK4gm9sk0j",   // Video course (€39)
     questions: "https://buy.stripe.com/eVq6oHa9gdQS71a0069sk0h",   // Exam-style questions (€39)
@@ -392,7 +494,11 @@
   document.addEventListener("DOMContentLoaded", () => {
     document.querySelectorAll("[data-link]").forEach(el => {
       const key = el.getAttribute("data-link");
-      if (LINKS[key]) el.href = LINKS[key];
+      if (LINKS[key]) {
+        el.href = LINKS[key];
+        el.target = "_blank";
+        el.rel = "noopener noreferrer";
+      }
     });
   });
 </script>
@@ -451,6 +557,48 @@
     </div>
   </div>
 </section>
+
+<!-- DEMO BANNER -->
+<div class="demo-banner" id="demo">
+  <div class="demo-inner">
+    <div class="demo-left">
+      <div class="demo-eyebrow">✦ Free · No commitment</div>
+      <h2>Try before you buy.<br><em>Free demo access.</em></h2>
+      <p>Not sure if our resources are right for you? Get instant access to two sample video lesson and exam-style practice questions — completely free. See exactly how we teach before spending a cent.</p>
+      <div class="demo-cta-row">
+        <a data-link="demo" href="#" class="btn-demo">Get Free Demo</a>
+        <span class="demo-no-account">Takes 30 seconds · No payment needed</span>
+      </div>
+    </div>
+    <div class="demo-right">
+      <div class="demo-includes-label">What's included in the demo</div>
+      <div class="demo-items">
+        <div class="demo-item">
+          <div class="demo-item-icon">🎬</div>
+          <div class="demo-item-text">
+            <h4>Full Video Lesson — Approximation &amp; Error</h4>
+            <p>A complete walkthrough of one of the most commonly examined AI SL topics, so you can judge the quality and style for yourself.</p>
+          </div>
+        </div>
+        <div class="demo-item">
+          <div class="demo-item-icon">🎬</div>
+          <div class="demo-item-text">
+            <h4>Full Video Lesson — Trigonometric Functions</h4>
+            <p>A complete walkthrough of one of the more challenging AI SL topics, showing how we break down complexity into clear, exam-ready steps.</p>
+          </div>
+        </div>
+        <div class="demo-item">
+          <div class="demo-item-icon">✏️</div>
+          <div class="demo-item-text">
+            <h4>Exam-Style Practice Questions</h4>
+            <p>A selection of questions from our full bank, with worked solutions in mark-scheme style.</p>
+          </div>
+        </div>
+      </div>
+      <p class="demo-disclaimer">Demo access is granted to the email you provide. A Google account is not required.</p>
+    </div>
+  </div>
+</div>
 
 <!-- RESOURCES -->
 <section class="resources" id="resources">
@@ -631,7 +779,7 @@
     <div class="footer-links">
       <a data-link="guarantee" href="#">Passing Guarantee</a>
       <a data-link="terms" href="#">Terms &amp; Conditions</a>
-      <a href="mailto:info@mentoringcph.com">info@mentoringcph.com</a>
+      <a href="/cdn-cgi/l/email-protection#026b6c646d426f676c766d706b6c6561726a2c616d6f"><span class="__cf_email__" data-cfemail="6b02050d042b060e051f041902050c081b0345080406">[email&#160;protected]</span></a>
     </div>
   </div>
   <div class="footer-bottom">
@@ -640,7 +788,7 @@
   </div>
 </footer>
 
-<script>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
   const counters = document.querySelectorAll('.count-up');
   const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
@@ -652,17 +800,4 @@
       const start = performance.now();
       function step(now) {
         const progress = Math.min((now - start) / duration, 1);
-        const eased = 1 - Math.pow(1 - progress, 3);
-        el.textContent = (eased * target).toFixed(decimals);
-        if (progress < 1) requestAnimationFrame(step);
-        else el.textContent = target.toFixed(decimals);
-      }
-      requestAnimationFrame(step);
-      observer.unobserve(el);
-    });
-  }, { threshold: 0.3 });
-  counters.forEach(c => observer.observe(c));
-</script>
-
-</body>
-</html>
+        const eased
