@@ -800,4 +800,17 @@
       const start = performance.now();
       function step(now) {
         const progress = Math.min((now - start) / duration, 1);
-        const eased
+        const eased = 1 - Math.pow(1 - progress, 3);
+        el.textContent = (eased * target).toFixed(decimals);
+        if (progress < 1) requestAnimationFrame(step);
+        else el.textContent = target.toFixed(decimals);
+      }
+      requestAnimationFrame(step);
+      observer.unobserve(el);
+    });
+  }, { threshold: 0.3 });
+  counters.forEach(c => observer.observe(c));
+</script>
+
+</body>
+</html>
